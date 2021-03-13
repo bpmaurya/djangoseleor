@@ -63,11 +63,27 @@ ALLOWED_CLIENT_HOSTS = get_list(ALLOWED_CLIENT_HOSTS)
 
 INTERNAL_IPS = get_list(os.environ.get("INTERNAL_IPS", "127.0.0.1"))
 
+
+
 DATABASES = {
     "default": dj_database_url.config(
-        default="postgres://saleor:saleor@localhost:5432/saleor", conn_max_age=600
+        default="postgres://wgbtqhzfgoyexl:edc93479b1e2d22ec759b53b74ad7f555cc873135d60d4324c564914ac7508b9@ec2-34-201-248-246.compute-1.amazonaws.com:5432/da6u09glen521m", conn_max_age=600
     )
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'da6u09glen521m',
+#         'USER': 'wgbtqhzfgoyexl',
+#         'PASSWORD': 'edc93479b1e2d22ec759b53b74ad7f555cc873135d60d4324c564914ac7508b9',
+#         'HOST': 'ec2-34-201-248-246.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
+
+
+
 
 
 TIME_ZONE = "UTC"
